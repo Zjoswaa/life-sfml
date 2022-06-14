@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include <iostream>
+#include <cmath>
 #include <SFML/Graphics.hpp>
 #include "constants.h"
 
@@ -17,7 +18,8 @@ public:
 private:
     sf::RenderWindow* window;
     sf::Event ev;
-    std::vector<std::vector<bool>> board;
+    //std::vector<std::vector<bool>> board;
+    std::vector<std::vector<sf::RectangleShape>> board;
 
     bool paused;
     int speed;
@@ -28,6 +30,10 @@ private:
     sf::Texture progressBarTextures[8];
     sf::Sprite progressBar;
 
+    sf::Texture pauseIconTexture;
+    sf::Texture playIconTexture;
+    sf::Sprite pauseStatus;
+
     void pollEvents();
     void initWindow();
     void initVariables();
@@ -35,6 +41,9 @@ private:
     void initSprites();
     void drawSprites();
     void updateProgressBarTexture();
+    void clearBoard();
+    // Sets the square that the mouse is currently on alive or dead
+    void setSquareAtMouse(bool alive);
 };
 
 #endif
