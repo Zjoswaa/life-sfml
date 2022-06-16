@@ -1,5 +1,0 @@
-C:\Users\Joshu\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\221.5787.29\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/MinGW/bin/mingw32-make.exe -DCMAKE_C_COMPILER=C:/MinGW/bin/gcc.exe -DCMAKE_CXX_COMPILER=C:/MinGW/bin/g++.exe -G "CodeBlocks - MinGW Makefiles" -S C:\Users\Joshu\Documents\Dev\Projects\life-sfml -B C:\Users\Joshu\Documents\Dev\Projects\life-sfml\cmake-build-debug
--- Found SFML 2.5.1 in C:/SFML/lib/cmake/SFML
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/Joshu/Documents/Dev/Projects/life-sfml/cmake-build-debug
