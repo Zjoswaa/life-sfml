@@ -1,8 +1,9 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <iostream>
 #include <cmath>
+#include <iostream>
+#include <random>
 #include <windows.h>
 #include <SFML/Graphics.hpp>
 #include "constants.h"
@@ -47,8 +48,11 @@ private:
     void clearBoard();
     // Sets the square that the mouse is currently on alive or dead
     void setSquareAtMouse(bool alive);
+    // Gets the amount of alive neighbours of the square at (x, y)
     int getAliveNeighbours(int x, int y);
+    // Updates the board to the next generation
     void updateBoard();
+    void addRandomSquares();
 };
 
 #endif

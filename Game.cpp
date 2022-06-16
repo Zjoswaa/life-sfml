@@ -1,5 +1,9 @@
 #include "Game.h"
 
+std::random_device generator;
+std::uniform_int_distribution<int> randomWidth(0, (boardWidth / squareSize) - 1);
+std::uniform_int_distribution<int> randomHeight(0, (boardHeight / squareSize) - 1);
+
 Game::Game() {
     this->initVariables();
     this->initWindow();
@@ -53,15 +57,6 @@ void Game::pollEvents() {
                 }
                 break;
 
-            case sf::Event::MouseWheelMoved:
-                if (this->ev.mouseWheel.delta < 0) {
-                    // Decrease Speed
-                    this->speed = std::max(minSpeed, this->speed - 1);
-                } else {
-                    // Increase Speed
-                    this->speed = std::min(maxSpeed, this->speed + 1);
-                }
-
             case sf::Event::KeyPressed:
                 switch (this->ev.key.code) {
                     case sf::Keyboard::Escape:
@@ -84,7 +79,7 @@ void Game::pollEvents() {
                     case sf::Keyboard::N:
                         // Next generation
                         if (paused) {
-                            updateBoard();
+                            this->updateBoard();
                         }
                         break;
 
@@ -105,7 +100,14 @@ void Game::pollEvents() {
 
                     case sf::Keyboard::C:
                         // Clear board
-                        this->clearBoard();
+                        if (paused) {
+                            this->clearBoard();
+                        }
+                        break;
+
+                    case sf::Keyboard::R:
+                        // Add random squares
+                        this->addRandomSquares();
                         break;
 
                     default:
@@ -380,5 +382,11 @@ void Game::updateBoard() {
                 board[j][i].setFillColor(deadColor);
             }
         }
+    }
+}
+
+void Game::addRandomSquares() {
+    for (int i = 0; i < randomSquaresCount; i++) {
+        board[randomHeight(generator)][randomWidth(generator)].setFillColor(aliveColor);
     }
 }

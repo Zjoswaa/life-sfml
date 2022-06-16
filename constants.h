@@ -18,6 +18,8 @@ const int maxSpeed = 8;
 const int minSpeed = 1;
 
 const sf::Color deadColor = sf::Color(255, 255, 255, 255);
-const sf::Color aliveColor = sf::Color(0, 0, 0, 150);
+const sf::Color aliveColor = sf::Color(0, 0, 0, 175);
+
+const int randomSquaresCount = 10;
 
 #endif
