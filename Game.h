@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cmath>
+#include <windows.h>
 #include <SFML/Graphics.hpp>
 #include "constants.h"
 
@@ -20,9 +21,11 @@ private:
     sf::Event ev;
     //std::vector<std::vector<bool>> board;
     std::vector<std::vector<sf::RectangleShape>> board;
+    std::vector<std::vector<bool>> nextBoard;
 
     bool paused;
     int speed;
+    int frameCounter;
 
     sf::Texture sideBarTexture;
     sf::Sprite sideBarSprite;
@@ -44,6 +47,8 @@ private:
     void clearBoard();
     // Sets the square that the mouse is currently on alive or dead
     void setSquareAtMouse(bool alive);
+    int getAliveNeighbours(int x, int y);
+    void updateBoard();
 };
 
 #endif
