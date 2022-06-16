@@ -4,7 +4,6 @@
 #include <cmath>
 #include <iostream>
 #include <random>
-#include <windows.h>
 #include <SFML/Graphics.hpp>
 #include "constants.h"
 
