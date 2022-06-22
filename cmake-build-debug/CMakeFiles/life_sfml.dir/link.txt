@@ -1,3 +1,0 @@
-C:\Users\Joshu\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\221.5787.29\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\life_sfml.dir/objects.a
-C:\MinGW\bin\ar.exe qc CMakeFiles\life_sfml.dir/objects.a @CMakeFiles\life_sfml.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\life_sfml.dir/objects.a -Wl,--no-whole-archive -o life_sfml.exe -Wl,--out-implib,liblife_sfml.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\life_sfml.dir\linklibs.rsp

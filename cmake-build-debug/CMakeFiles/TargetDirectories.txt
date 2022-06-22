@@ -1,3 +1,0 @@
-C:/Users/Joshu/Documents/Dev/Projects/life-sfml/cmake-build-debug/CMakeFiles/life_sfml.dir
-C:/Users/Joshu/Documents/Dev/Projects/life-sfml/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Joshu/Documents/Dev/Projects/life-sfml/cmake-build-debug/CMakeFiles/rebuild_cache.dir
