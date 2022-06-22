@@ -10,7 +10,7 @@ Date of last edit: 16/6/2022
 
 - Clone into directory
 ```
-cd life-sfml/cmake-build-debug/
+cd life-sfml/exe/
 ```
 - From there you can either run the .exe with ```./life_sfml.exe```
 
@@ -21,9 +21,3 @@ cd life-sfml/cmake-build-debug/
 The parameters you need to edit in ```CMakeLists.txt``` are:
   - ```set(SFML_DIR C:/SFML/lib/cmake/SFML)``` to where you downloaded SFML.
   - ```include_directories(C:/SFML/include)``` to where you downloaded SFML.
-
-  From there, you can then run ```make``` and then ```./life_sfml.exe```.
-
-In JetBrains CLion, which I used to make the game, you can open ```life-sfml/``` and
-then build / run. CLion uses the CMakeLists.txt to generate a Makefile and creates
-the .exe from there.
